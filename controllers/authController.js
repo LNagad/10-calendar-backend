@@ -4,7 +4,7 @@ const User = require('../models/User');
 const { generateJWT } = require( '../helpers/jwt');
 
 
-const loginUser = async(req = request, res = response, next) => {
+exports.loginUser = async(req = request, res = response, next) => {
     
     const { email, password } = req.body;
 
@@ -43,7 +43,7 @@ const loginUser = async(req = request, res = response, next) => {
   
 };
 
-const createUser = async(req = request, res = response, next) => {
+exports.createUser = async(req = request, res = response, next) => {
 
     try {
         const { name, email, password } = req.body;
@@ -76,7 +76,7 @@ const createUser = async(req = request, res = response, next) => {
     }
 };
 
-const renewToken = async(req = request, res = response) => {
+exports.renewToken = async(req = request, res = response) => {
     
     const { uid, name } = req;
     
@@ -87,8 +87,4 @@ const renewToken = async(req = request, res = response) => {
         ok: true,
         token
     });
-};
-
-module.exports = {
-    createUser, loginUser, renewToken
 };

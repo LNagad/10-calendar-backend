@@ -5,9 +5,9 @@ const jwt = require('jsonwebtoken');
 const validateJWT = ( req = request, res = response, next ) => {
   
     // x-token header
+    const token = req.header('x-token');
     
     try {
-        const token = req.header('x-token');
     
         if ( !token ) {
             const error = new Error('Token was not sent');
@@ -26,8 +26,9 @@ const validateJWT = ( req = request, res = response, next ) => {
         next();
         
     } catch (error) {
+        console.log(error);
         error.statusCode = 401,
-        error.message ?? 'Invalid token';
+        error.message = 'Invalid token';
         next(error);
     }
 };

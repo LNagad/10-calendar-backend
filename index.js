@@ -23,10 +23,12 @@ app.use( express.json() );
 
 // Routes
 // TODO: auth // crear, login, renew
-app.use( '/api/auth', require('./routes/auth') );
-
+app.use('/api/auth', require('./routes/auth'));
 
 // TODO: CRUD: Eventos
+app.use('/api/events', require('./routes/events'));
+
+
 
 // App Error middleware
 app.use((error, req, res, next) => {
