@@ -7,9 +7,10 @@ const app = express();
 
 //CORS
 const corsOptions = {
-    origin: ['http://localhost', 'https://www.example.com']
+    origin: ['http://localhost:5173', 'https://lnagad.github.io']
 };
   
+// app.use(cors(corsOptions));
 app.use(cors(corsOptions));
   
 // Database
@@ -22,13 +23,9 @@ app.use( express.static('public') );
 app.use( express.json() );
 
 // Routes
-// TODO: auth // crear, login, renew
+
 app.use('/api/auth', require('./routes/auth'));
-
-// TODO: CRUD: Eventos
 app.use('/api/events', require('./routes/events'));
-
-
 
 // App Error middleware
 app.use((error, req, res, next) => {
