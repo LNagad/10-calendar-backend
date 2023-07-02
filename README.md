@@ -9,9 +9,8 @@ This is the backend for a MERN calendar app, which provides essential functional
 - JWT security: Implementation of JSON Web Tokens (JWT) for secure authentication and authorization.
 - Error pattern middleware: Consistent error handling and response patterns to enhance maintainability and readability.
 - Events endpoint CRUD: Full CRUD (Create, Read, Update, Delete) operations for managing calendar events.
-- The user can only edit their own events. Instead of fetching only the user's events, I decided to fetch all events and differentiate the user's logged events from others by coloring them.
 - Events validations.
-- Form Validations.
+- Forms validations.
 
   
 ## Technologies Used
