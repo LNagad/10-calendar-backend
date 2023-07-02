@@ -20,3 +20,7 @@ This is the backend for a MERN calendar app, which provides essential functional
 - MongoDB: A popular NoSQL database for storing and retrieving data efficiently.
 - Mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js.
 - JWT: JSON Web Tokens for secure user authentication and authorization.
+
+## Front
+[![Front-end](https://img.shields.io/badge/Front--end-Go%20to%20Front--end-success?style=for-the-badge&logo=bootstrap)](https://github.com/LNagad/calendar-front)
+
